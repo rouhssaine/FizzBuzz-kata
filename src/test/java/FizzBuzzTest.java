@@ -17,12 +17,12 @@ class FizzBuzzTest {
 
     @Test
     void should_return_one_when_input_one() {
-        assertThat(fizzBuzz.of(1)).isEqualTo(1);
+        assertThat(fizzBuzz.of(1)).isEqualTo("1");
     }
 
     @Test
     void should_return_two_when_input_two() {
-        assertThat(fizzBuzz.of(2)).isEqualTo(2);
+        assertThat(fizzBuzz.of(2)).isEqualTo("2");
     }
 
     @Test
