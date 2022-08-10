@@ -6,10 +6,17 @@ public class FizzBuzz {
     public static final String BUZZ = "Buzz";
 
     public String of(int input) {
-        if (input % 3 == 0) return FIZZ;
-        if (input == 5) return BUZZ;
-        if (input == 10) return BUZZ;
+        if (isFizz(input)) return FIZZ;
+        if (isBuzz(input)) return BUZZ;
         return valueOf(input);
+    }
+
+    private boolean isFizz(int input) {
+        return input % 3 == 0;
+    }
+
+    private boolean isBuzz(int input) {
+        return input % 5 == 0;
     }
 
 }
