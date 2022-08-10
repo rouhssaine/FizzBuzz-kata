@@ -35,4 +35,9 @@ class FizzBuzzTest {
         assertThat(fizzBuzz.of(5)).isEqualTo("Buzz");
     }
 
+    @Test
+    void should_return_fizz_when_input_six() {
+        assertThat(fizzBuzz.of(6)).isEqualTo("Fizz");
+    }
+
 }
