@@ -6,8 +6,7 @@ public class FizzBuzz {
     public static final String BUZZ = "Buzz";
 
     public String of(int input) {
-        if (input == 3) return FIZZ;
-        if (input == 6) return FIZZ;
+        if (input % 3 == 0) return FIZZ;
         if (input == 5) return BUZZ;
         return valueOf(input);
     }
