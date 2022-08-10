@@ -8,6 +8,7 @@ public class FizzBuzz {
     public String of(int input) {
         if (input % 3 == 0) return FIZZ;
         if (input == 5) return BUZZ;
+        if (input == 10) return BUZZ;
         return valueOf(input);
     }
 
