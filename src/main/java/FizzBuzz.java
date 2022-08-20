@@ -6,7 +6,7 @@ public class FizzBuzz {
     public static final String BUZZ = "Buzz";
 
     public String of(int input) {
-        if (input == 15) return FIZZ+BUZZ;
+        if (isFizz(input) && isBuzz(input)) return FIZZ+BUZZ;
         if (isFizz(input)) return FIZZ;
         if (isBuzz(input)) return BUZZ;
         return valueOf(input);
