@@ -4,20 +4,18 @@ public class FizzBuzz {
 
     public static final String FIZZ = "Fizz";
     public static final String BUZZ = "Buzz";
+    public static final int FIZZ_VALUE = 3;
+    public static final int BUZZ_VALUE = 5;
 
-    public String of(int input) {
-        if (isFizz(input) && isBuzz(input)) return FIZZ+BUZZ;
-        if (isFizz(input)) return FIZZ;
-        if (isBuzz(input)) return BUZZ;
-        return valueOf(input);
+    public String of(int value) {
+        if (isMultipleOf(value, FIZZ_VALUE) && isMultipleOf(value, BUZZ_VALUE)) return FIZZ+BUZZ;
+        if (isMultipleOf(value, FIZZ_VALUE)) return FIZZ;
+        if (isMultipleOf(value, BUZZ_VALUE)) return BUZZ;
+        return valueOf(value);
     }
 
-    private boolean isFizz(int input) {
-        return input % 3 == 0;
-    }
-
-    private boolean isBuzz(int input) {
-        return input % 5 == 0;
+    private boolean isMultipleOf(int number, int divider) {
+        return number % divider == 0;
     }
 
 }
