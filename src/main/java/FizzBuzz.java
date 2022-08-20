@@ -1,7 +1,3 @@
-import com.google.common.base.Strings;
-
-import java.util.Optional;
-
 import static java.lang.String.valueOf;
 
 public class FizzBuzz {
@@ -15,18 +11,11 @@ public class FizzBuzz {
         StringBuilder fizzBuzzBuilder = new StringBuilder();
         if (isMultipleOf(value, FIZZ_VALUE)) fizzBuzzBuilder.append(FIZZ);
         if (isMultipleOf(value, BUZZ_VALUE)) fizzBuzzBuilder.append(BUZZ);
-        return fizzBuzzOf(value, fizzBuzzBuilder);
+        return fizzBuzzBuilder.isEmpty() ? valueOf(value) : fizzBuzzBuilder.toString();
     }
 
     private boolean isMultipleOf(int number, int divider) {
         return number % divider == 0;
-    }
-
-    private String fizzBuzzOf(int value, StringBuilder fizzBuzzBuilder) {
-        return Optional.of(fizzBuzzBuilder)
-                .map(StringBuilder::toString)
-                .map(Strings::emptyToNull)
-                .orElse(valueOf(value));
     }
 
 }
